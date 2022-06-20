@@ -8,4 +8,6 @@ se no banco de dados (caso.csv) existem dados referentes à esta cidade. Caso ex
 um gráfico que exibe a evolução do número de mortes por covid numa escala diária, a partir de
 todos os dados disponíveis no banco de dados relativos à cidade informada. 
 
+Vídeo explicativo: https://youtu.be/ZawrXr_yquk
+
 <img src="/img.png"/>
