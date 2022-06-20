@@ -20,13 +20,14 @@ def update_figure():
     ax.set_xticklabels([])
     ax.invert_xaxis()
     ax.set_ylabel('Mortes por COVID-19')
-    ax.set_xlabel('03/20               09/20               03/21               09/21               03/22')
 
 # Função que plota o gráfico
 def plot_figure():
     ax.plot(x, y, 'b-')
+    ax.set_xlabel(pri_dia + '                                                                               ' + ult_dia)
     fig.suptitle(cidade + ', ' + estado, fontsize=20)
     figure_canvas_agg.draw()
+
 
 # Layout da interface gráfica
 sg.theme('DarkBlue')
@@ -68,6 +69,8 @@ while True:
         if hab != 0:  # Verificando se a cidade existe
             x = df['date']
             y = df['deaths']
+            ult_dia = df.iloc[0]['date']
+            pri_dia = df.iloc[-1]['date']
             window['mensagem'].update('Cidade encontrada!')
             plot_figure()
         else:
