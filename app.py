@@ -28,7 +28,6 @@ def plot_figure():
     fig.suptitle(cidade + ', ' + estado, fontsize=20)
     figure_canvas_agg.draw()
 
-
 # Layout da interface gráfica
 sg.theme('DarkBlue')
 
@@ -77,4 +76,3 @@ while True:
             window['mensagem'].update('Cidade não encontrada!')
             
 window.close()
-
